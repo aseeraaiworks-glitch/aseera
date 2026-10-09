@@ -1,0 +1,108 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+
+  --color-forest: var(--forest);
+  --color-forest-deep: var(--forest-deep);
+  --color-paper: var(--paper);
+  --color-sage: var(--sage);
+  --color-sage-soft: var(--sage-soft);
+
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-foreground: var(--foreground);
+  --color-background: var(--background);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+}
+
+:root {
+  color-scheme: light;
+
+  --forest: #173c2d;
+  --forest-deep: #10291f;
+  --paper: #f7f7f4;
+  --sage: #8fae9c;
+  --sage-soft: #e7ede8;
+
+  --background: #f7f7f4;
+  --foreground: #13261d;
+  --card: #ffffff;
+  --card-foreground: #13261d;
+  --popover: #ffffff;
+  --popover-foreground: #13261d;
+  --primary: #173c2d;
+  --primary-foreground: #f7f7f4;
+  --secondary: #ffffff;
+  --secondary-foreground: #173c2d;
+  --muted: #eeefeb;
+  --muted-foreground: #5c6560;
+  --accent: #e7ede8;
+  --accent-foreground: #173c2d;
+  --destructive: #b42318;
+  --border: #dcdfd9;
+  --input: #dcdfd9;
+  --ring: #173c2d;
+  --radius: 0.375rem;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-background text-foreground;
+    overflow-x: clip;
+  }
+  ::selection {
+    background: var(--forest);
+    color: var(--paper);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  .animate-rise {
+    animation: rise 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  }
+
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
