@@ -24,9 +24,9 @@ export const site = {
   name: 'ASEERA',
   tagline: 'Aseera Go Beyond.',
   url: 'https://aseerakarsa.com',
-  title: 'ASEERA — Building Ideas Into Meaningful Products',
+  title: 'Aseera Group Indonesia',
   description:
-    'ASEERA is an independent brand and product ecosystem founded on January 2, 2026, developing purposeful ideas and digital products.',
+    'Independent product group based in Indonesia. Aseera builds digital products, brands, and ecosystems.',
   founder: {
     name: 'Andy Faiz Anissullah',
     role: 'Founder of ASEERA',
