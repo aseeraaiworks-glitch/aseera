@@ -54,8 +54,8 @@ export const navItems: NavItem[] = [
 export const contactChannels: ContactChannel[] = [
   {
     label: 'Email',
-    value: 'contact@aseerakarsa.com',
-    href: 'mailto:contact@aseerakarsa.com',
+    value: 'aseera.aiworks@gmail.com',
+    href: 'mailto:aseera.aiworks@gmail.com',
   },
 ]
 
